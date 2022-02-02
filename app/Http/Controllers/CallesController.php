@@ -17,7 +17,7 @@ class CallesController extends Controller
         ->join('regions','provincias.id_region','=','regions.id')
         ->select('calles.id as id_calle','calles.nombre_calle','comunas.id as id_comuna','comunas.nombre_comuna','provincias.id as id_provincia','provincias.nombre_provincia','regions.id as id_region','regions.nombre_region')                
         ->get();
-        return $resultado;
+        return $resultado; 
     }
      
     public function store(Request $request)
@@ -30,6 +30,7 @@ class CallesController extends Controller
 
     public function update(Request $request)
     {
+        
         $calle = Calles::findOrFail($request->id);
         $calle->nombre_calle = $request->nombre_calle; 
         $calle->id_comuna = $request->id_comuna;            
