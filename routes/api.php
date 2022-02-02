@@ -41,12 +41,13 @@ Route::get('/provinciasRegion/{id}', 'App\Http\Controllers\ProvinciasController@
 Route::get('/comunasProvincia/{id}', 'App\Http\Controllers\ComunasController@showComunasPorProvincia'); //lista comunas por provincia
 
 //CALLES
+Route::get('/calles', 'App\Http\Controllers\CallesController@index'); //Listado de todas las calles LISTO
 
-Route::get('/calleComuna', 'App\Http\Controllers\CallesController@mostrandoCalles'); //Listado de todas las calles
-Route::post('/calles', 'App\Http\Controllers\CallesController@store');//insertar calle por nombre 
-Route::delete('calleComuna/{id}', 'App\Http\Controllers\CallesController@destroy'); //Eliminar Calle
+Route::post('/calle', 'App\Http\Controllers\CallesController@store');//insertar calle por nombre LISTO
 
+Route::delete('calle/{id}', 'App\Http\Controllers\CallesController@destroy'); //Eliminar Calle LISTO
 
-Route::put('/calleComuna/{id}', 'App\Http\Controllers\CallesController@update');    //update calle
-Route::get('/calleComuna/{id}', 'App\Http\Controllers\CallesController@listarCalle');    //listar una calle
+Route::put('/calle/{id}', 'App\Http\Controllers\CallesController@update');    //update calle listo
+
+Route::get('/calle/{id}', 'App\Http\Controllers\CallesController@listarCalle');    //listar una calle
 

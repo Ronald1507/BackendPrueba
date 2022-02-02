@@ -16,6 +16,9 @@ class CreateCallesTable extends Migration
         Schema::create('calles', function (Blueprint $table) {
             $table->id();
             $table->string('nombre_calle');
+            $table->unsignedBigInteger('id_comuna');
+
+            $table->foreign('id_comuna')->references('id')->on('comunas');
             
             $table->timestamps();
         });
@@ -24,7 +27,7 @@ class CreateCallesTable extends Migration
     /**
      * Reverse the migrations.
      *
-     * @return void
+     * @return void 
      */
     public function down()
     {

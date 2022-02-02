@@ -16,19 +16,24 @@ class CalleSeeder extends Seeder
     {
         DB::table('calles')->insert([
             [
-                'nombre_calle'=> 'Paicavi'
+                'nombre_calle'=> 'Paicavi',
+                'id_comuna'=>23
             ],
             [
-                'nombre_calle'=> 'Arturo Prat'
+                'nombre_calle'=> 'Arturo Prat',
+                'id_comuna'=>100
             ],
             [
-                'nombre_calle'=> 'Los Carrera'
+                'nombre_calle'=> 'Los Carrera',
+                'id_comuna'=>235
             ],
             [
-                'nombre_calle'=> 'Freire'
+                'nombre_calle'=> 'Freire',
+                'id_comuna'=>1                
             ],
             [
-                'nombre_calle'=> 'Alameda'
+                'nombre_calle'=> 'Alameda',
+                'id_comuna'=>230
             ]
         ]);
     }
